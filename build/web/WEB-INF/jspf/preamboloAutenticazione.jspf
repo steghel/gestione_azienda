@@ -1,0 +1,10 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<jsp:useBean id="vincenzo" scope="session" class="miaroba.beans.controlloreBean" />
+
+<c:if test="${!vincenzo.autenticato}">
+        <c:redirect url="../index.jsp"/>
+        <%--<jsp:forward page="../index.jsp" />--%>
+</c:if>
+
